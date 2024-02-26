@@ -7,7 +7,6 @@ import LoginCaptcha from './LoginCaptcha';
 import handleToast from '../../Utils/toast';
 import { ToastContainer } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import { UseSelector } from 'react-redux';
 
 
 const LoginPage = () => {
@@ -40,8 +39,8 @@ const LoginPage = () => {
         } else if (!isCaptchaValid) {
             handleToast("Invalid Captcha")
         } else {
-            // dispatch(loginSuccess({email}));
-            dispatch(getLoginDetails({email, password}));
+            dispatch(loginSuccess({email}));
+            // dispatch(getLoginDetails({email : email}));
             
             }
             // dispatch(getLoginDetails(email, password));
