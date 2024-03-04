@@ -34,14 +34,20 @@ const LoginPage = () => {
         console.log("isAuthenticated:", isAuthenticated);
         console.log("isCaptchaValid:", isCaptchaValid);
 
-        if (!email || !password || !isAuthenticated) {
+        if (!email || !password ) {
             handleToast("Invalid Credentials");
         } else if (!isCaptchaValid) {
             handleToast("Invalid Captcha")
-        } else {
-            dispatch(loginSuccess({email}));
-            // dispatch(getLoginDetails({email : email}));
-            
+        } 
+         {
+            const res = dispatch(getLoginDetails({email : email}));
+
+            if (res.data) {
+                console.log('login successful')
+            } else {
+                console.log("invalid")
+            }
+            // dispatch(loginSuccess({email}));
             }
             // dispatch(getLoginDetails(email, password));
         
