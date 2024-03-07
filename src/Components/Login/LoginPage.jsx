@@ -48,9 +48,6 @@ const LoginPage = () => {
             // dispatch(getLoginDetails(email, password));
         
         // if (userId !== correctEmail || password !== correctPassword) {
-        //     handleToast("Invalid Credentials")
-        // } else if (!isCaptchaValid) {
-        //     handleToast("Invalid Captcha")
     
     }
 
