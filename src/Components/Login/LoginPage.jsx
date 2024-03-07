@@ -51,9 +51,7 @@ const LoginPage = () => {
         //     handleToast("Invalid Credentials")
         // } else if (!isCaptchaValid) {
         //     handleToast("Invalid Captcha")
-        // } else {
-        //     dispatch(getLoginDetails(userId, password));
-        // } 
+    
     }
 
   const handleCaptchaValidation = (isValid) => {
